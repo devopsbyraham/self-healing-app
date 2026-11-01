@@ -5,7 +5,7 @@ metadata:
   namespace: production
 
 spec:
-  replicas: 10
+  replicas: 2
 
   strategy:
     type: RollingUpdate
@@ -30,12 +30,12 @@ spec:
           image: rahamshaik/zomato_new:0436748936d87c8d775163a1eeb1f8ba0d1d548e
 
           ports:
-            - containerPort: 3001
+            - containerPort: 3000
 
           resources:
             requests:
-              cpu: "2000m"
-              memory: "2Gi"
+              cpu: "100m"
+              memory: "256Mi"
             limits:
               cpu: "500m"
               memory: "1Gi"
