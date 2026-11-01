@@ -5,7 +5,7 @@ metadata:
   namespace: production
 
 spec:
-  replicas: 2
+  replicas: 10
 
   strategy:
     type: RollingUpdate
@@ -34,8 +34,8 @@ spec:
 
           resources:
             requests:
-              cpu: "100m"
-              memory: "256Mi"
+              cpu: "2000m"
+              memory: "2Gi"
             limits:
               cpu: "500m"
               memory: "1Gi"
